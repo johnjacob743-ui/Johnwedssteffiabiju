@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steffia & John — Wedding Invitation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@300;400;500&family=Great+Vibes&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #3d3b40;
+            --accent: #7c7380;
+            --gold: #b89753;
+            --bg-light: #fbf9f6;
+            --text: #2c2c2c;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text);
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        header {
+            padding: 4rem 1rem 3rem;
+            background: linear-gradient(180deg, #f0ece6 0%, var(--bg-light) 100%);
+        }
+
+        .blessing {
+            font-style: italic;
+            font-size: 0.95rem;
+            color: var(--primary);
+            max-width: 600px;
+            margin: 0 auto 1.5rem;
+            opacity: 0.9;
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 2.3rem;
+            letter-spacing: 2px;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.5rem;
+            color: var(--gold);
+            margin-bottom: 1rem;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem 1rem 3rem;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 2.5rem 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+            border: 1px solid #f0eae1;
+        }
+
+        .card-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.4rem;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 1rem;
+        }
+
+        .event-details {
+            margin: 1.5rem 0;
+        }
+
+        .date {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--gold);
+            letter-spacing: 1px;
+        }
+
+        .time {
+            font-size: 1.05rem;
+            color: #555;
+            margin-top: 0.3rem;
+        }
+
+        .venue {
+            margin-top: 1rem;
+            font-weight: 600;
+            color: var(--primary);
+            font-size: 1.1rem;
+        }
+
+        .location {
+            color: #666;
+            font-size: 0.95rem;
+            margin-top: 0.2rem;
+        }
+
+        .countdown-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .timer {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .timer-box {
+            background: var(--primary);
+            color: #fff;
+            padding: 0.7rem 0.8rem;
+            border-radius: 8px;
+            min-width: 65px;
+        }
+
+        .timer-box .number {
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+
+        .timer-box .label {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--gold);
+            color: #fff;
+            padding: 0.75rem 1.8rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: opacity 0.3s ease;
+            margin-top: 1rem;
+            letter-spacing: 0.5px;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        footer {
+            padding: 2rem;
+            font-size: 0.85rem;
+            color: #777;
+            background-color: #f0ece6;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <p class="blessing">"The grace of the Lord Jesus Christ be with your spirit. Amen."</p>
+        <h1>Steffia Biju & John Jacob</h1>
+        <p class="subtitle">Save Our Date</p>
+    </header>
+
+    <div class="container">
+
+        <!-- Countdown Section -->
+        <div class="card">
+            <h3 class="countdown-title">Countdown to Engagement</h3>
+            <div class="timer" id="countdown">
+                <div class="timer-box"><span class="number" id="days">00</span><span class="label">Days</span></div>
+                <div class="timer-box"><span class="number" id="hours">00</span><span class="label">Hours</span></div>
+                <div class="timer-box"><span class="number" id="minutes">00</span><span class="label">Mins</span></div>
+                <div class="timer-box"><span class="number" id="seconds">00</span><span class="label">Secs</span></div>
+            </div>
+        </div>
+
+        <!-- Engagement Details -->
+        <div class="card">
+            <h2 class="card-title">Engagement</h2>
+            <p>Cordially invite you to celebrate their engagement</p>
+            
+            <div class="event-details">
+                <div class="date">20-AUGUST-2026</div>
+                <div class="time">11:00 AM</div>
+                <div class="venue">Bethel Marthoma Parish Hall</div>
+                <div class="location">Karavaloor, Punalur</div>
+            </div>
+
+            <a href="https://maps.google.com/?q=Bethel+Marthoma+Parish+Hall+Karavaloor+Punalur" target="_blank" class="btn">Google Map Directions</a>
+        </div>
+
+        <!-- Wedding Details -->
+        <div class="card">
+            <h2 class="card-title">Wedding Ceremony</h2>
+            <p>You are invited to wedding ceremony of</p>
+            <div class="event-details">
+                <div class="date">24-AUG-2026</div>
+                <div class="time">10:00 AM</div>
+                <div class="venue">Ambadi Auditorium</div>
+                <div class="location">Ayoor</div>
+            </div>
+
+            <a href="https://maps.google.com/?q=Ambadi+Auditorium+Ayoor" target="_blank" class="btn">Google Map Directions</a>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>We look forward to celebrating this joyful occasion with you!</p>
+    </footer>
+
+    <script>
+        // Countdown to Engagement: August 20, 2026, 11:00 AM
+        const eventDate = new Date("August 20, 2026 11:00:00").getTime();
+
+        const timer = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = eventDate - now;
+
+            if (distance < 0) {
+                clearInterval(timer);
+                document.getElementById("countdown").innerHTML = "<p style='font-weight: 600; color: var(--gold);'>The engagement day has arrived!</p>";
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerText = String(days).padStart(2, '0');
+            document.getElementById("hours").innerText = String(hours).padStart(2, '0');
+            document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');
+            document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');
+        }, 1000);
+    </script>
+</body>
+</html>
